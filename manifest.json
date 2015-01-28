@@ -1,0 +1,6 @@
+{
+  "name": "fav-kyou",
+  "description": "twitter favorite handler chrome plugin",
+  "version": "1.0",
+  "manifest_version": 2
+}
