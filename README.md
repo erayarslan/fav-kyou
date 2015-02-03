@@ -8,6 +8,10 @@ twitter favorite handler chrome plugin
 
 fav-kyou fav-kan :damn:
 
+## screens
+
+![screens](https://raw.githubusercontent.com/erayarslan/fav-kyou/master/screens.png)
+
 ## future tasks
 
 - [x] Favorite Handler

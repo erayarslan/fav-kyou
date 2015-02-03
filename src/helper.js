@@ -1,11 +1,20 @@
 /*
-
   author : Eray Arslan
   for : Furkan Başaran <3
-
  */
 
 $(document).ready(function () {
+  if (Notification.permission !== "granted") {
+    Notification.requestPermission();
+  }
+
+  function notifyMe(message) {
+    var notification = new Notification('fav-kyou', {
+      icon: 'https://raw.githubusercontent.com/erayarslan/fav-kyou/master/assert/icon128.png',
+      body: message
+    });
+  }
+
   var trick = function () {
     $(document).ajaxComplete(function (event, request, settings) {
       document.body.dispatchEvent(new CustomEvent('trick' , { detail : JSON.stringify(settings)}));
@@ -23,9 +32,9 @@ $(document).ready(function () {
     //
     var data = JSON.parse(e.detail);
     if(data.url === "/i/tweet/favorite") {
-      alert(favorite_messages[Math.floor((Math.random() * (favorite_messages.length - 1)) + 0)]);
+      notifyMe(favorite_messages[Math.floor((Math.random() * (favorite_messages.length - 1)) + 0)]);
     } else if(data.url === "/i/tweet/unfavorite") {
-      alert(unfavorite_messages[Math.floor((Math.random() * (unfavorite_messages.length - 1)) + 0)]);
+      notifyMe(unfavorite_messages[Math.floor((Math.random() * (unfavorite_messages.length - 1)) + 0)]);
     }
   });
 });
