@@ -1,3 +1,5 @@
+![Logo](https://raw.githubusercontent.com/erayarslan/fav-kyou/master/assert/icon128.png)
+
 # fav-kyou
 
 twitter favorite handler chrome plugin
