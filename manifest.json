@@ -4,6 +4,11 @@
   "version" : "1.0",
   "permissions": ["http://twitter.com/*", "https://twitter.com/*"],
   "manifest_version" : 2,
+  "icons": {
+    "16": "assert/icon16.png",
+    "48": "assert/icon48.png",
+    "128": "assert/icon128.png"
+  },
   "content_scripts" : [
     {
       "matches" : [
