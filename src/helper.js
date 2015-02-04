@@ -74,7 +74,14 @@ var random = function (from, to) {
   return Math.floor((Math.random() * (to - 1)) + from);
 };
 
-var doFavkYou = function (url) {
+var getParameterByName = function (name, url) {
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(url);
+  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+};
+
+var doFavkYou = function (url, data) {
   if (url === "/i/tweet/favorite") {
     notify(favorite_messages[random(0, favorite_messages.length - 1)]);
   } else if (url === "/i/tweet/unfavorite") {
@@ -83,13 +90,15 @@ var doFavkYou = function (url) {
     notify(retweet_messages[random(0, retweet_messages.length - 1)]);
   } else if (url === "/i/tweet/unretweet") {
     notify(unretweet_messages[random(0, unretweet_messages.length - 1)]);
+  } else if (url === "/i/tweet/create") {
+    notify(getParameterByName("status", data));
   }
 };
 
 var addListener = function () {
   document.body.addEventListener('trick', function (e) {
     var data = JSON.parse(e.detail);
-    doFavkYou(data.url);
+    doFavkYou(data.url, data.data);
   });
 };
 

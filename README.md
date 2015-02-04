@@ -18,6 +18,7 @@ fav-kyou fav-kan :damn:
 - [x] UnFavorite Handler
 - [x] ReTweet Handler
 - [x] UnReTweet Handler
+- [x] Tweet Handler
 - [ ] **fav-k this shit**
 
 ## license
