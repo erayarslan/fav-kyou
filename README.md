@@ -2,7 +2,7 @@
 
 # fav-kyou
 
-twitter favorite handler chrome plugin
+twitter action handler chrome plugin
 
 ## about
 

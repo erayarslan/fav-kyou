@@ -2,7 +2,7 @@
  * @module helper
  * author : Eray Arslan <relfishere@gmail.com>
  *
- * twitter favorite handler chrome plugin _\o.o/_
+ * twitter action handler chrome plugin _\o.o/_
  */
 
 var name = "fav-kyou";
