@@ -19,6 +19,7 @@ fav-kyou fav-kan :damn:
 - [x] ReTweet Handler
 - [x] UnReTweet Handler
 - [x] Tweet Handler
+- [x] Browser Action
 - [ ] **fav-k this shit**
 
 ## browser support

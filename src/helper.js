@@ -71,7 +71,7 @@ var injectScript = function () {
 };
 
 var random = function (from, to) {
-  return Math.floor((Math.random() * (to - 1)) + from);
+  return Math.floor((Math.random() * (to)) + from);
 };
 
 var getParameterByName = function (name, url) {
@@ -83,13 +83,13 @@ var getParameterByName = function (name, url) {
 
 var doFavkYou = function (url, data) {
   if (url === "/i/tweet/favorite") {
-    notify(favorite_messages[random(0, favorite_messages.length - 1)]);
+    notify(favorite_messages[random(0, favorite_messages.length)]);
   } else if (url === "/i/tweet/unfavorite") {
-    notify(unfavorite_messages[random(0, unfavorite_messages.length - 1)]);
+    notify(unfavorite_messages[random(0, unfavorite_messages.length)]);
   } else if (url === "/i/tweet/retweet") {
-    notify(retweet_messages[random(0, retweet_messages.length - 1)]);
+    notify(retweet_messages[random(0, retweet_messages.length)]);
   } else if (url === "/i/tweet/unretweet") {
-    notify(unretweet_messages[random(0, unretweet_messages.length - 1)]);
+    notify(unretweet_messages[random(0, unretweet_messages.length)]);
   } else if (url === "/i/tweet/create") {
     notify(getParameterByName("status", data));
   }
