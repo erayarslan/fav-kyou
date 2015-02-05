@@ -21,10 +21,20 @@ fav-kyou fav-kan :damn:
 - [x] Tweet Handler
 - [ ] **fav-k this shit**
 
+## browser support
+
+![Chrome](https://cloud.githubusercontent.com/assets/398893/3528328/23bc7bc4-078e-11e4-8752-ba2809bf5cce.png) |
+--- |
+ ✔ |
+
 ## license
 
 fuck you.
 
 ## contributing
 
-no.
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
