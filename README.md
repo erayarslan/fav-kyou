@@ -24,6 +24,7 @@ click [here](https://gist.github.com/erayarslan/fa06bf20996d3a843abf)
 - [x] UnReTweet Handler
 - [x] Tweet Handler
 - [x] Browser Action
+- [x] Remote Messages
 - [ ] **fav-k this shit**
 
 ## browser support
