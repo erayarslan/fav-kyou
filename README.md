@@ -12,6 +12,10 @@ fav-kyou fav-kan :damn:
 
 ![screens](https://raw.githubusercontent.com/erayarslan/fav-kyou/master/screens.png)
 
+## storage
+
+click [here](https://gist.github.com/erayarslan/fa06bf20996d3a843abf)
+
 ## future tasks
 
 - [x] Favorite Handler

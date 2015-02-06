@@ -6,39 +6,8 @@
  */
 
 var name = "fav-kyou";
-//
-var favorite_messages = [
-  "YAPMA",
-  "OLDU MU ŞİMDİ BU?",
-  "ERAY KÜFÜR EDİYOR, HATIRLA!",
-  "HOŞ MU?",
-  "KOMİK Mİ ŞİMDİ BU?"
-];
-//
-var unfavorite_messages = [
-  "AFFERİM",
-  "ADAMIN DİBİSİN",
-  "ERAY'DAN RT'Yİ KAPTIN",
-  "SEN ADAMIN DİBİSİN (Y)",
-  "KOMİK DEĞİLDİ ZATEN"
-];
-//
-var retweet_messages = [
-  "DOĞRU YOLDASIN (Y)",
-  "CANINI YİRİM",
-  "GOL OLUR",
-  "LAZIM OLUR KESİN DURSUN BU"
-];
-//
-var unretweet_messages = [
-  "_\\o.o//_",
-  "BU FARKMAZ",
-  "KEYFİN BİLİR",
-  "ÜZÜLMESİN?",
-  "AMAAAN İYİ YAPTIN",
-  "YA LAZIM OLURSA?",
-  "MUV BİÇ GEDAVDI VEY"
-];
+var message_storage_url = "https://gist.githubusercontent.com/erayarslan/fa06bf20996d3a843abf/raw/fav_kyou_storage.json";
+var favorite_messages, unfavorite_messages, retweet_messages, unretweet_messages;
 
 var checkNotificationAccess = function () {
   if (Notification.permission !== "granted") {
@@ -63,10 +32,19 @@ var trick = function () {
   });
 };
 
-var injectScript = function () {
+var loadMessages = function() {
+  $.getJSON(message_storage_url, function(data) {
+    favorite_messages = data.favorite_messages;
+    unfavorite_messages = data.unfavorite_messages;
+    retweet_messages = data.retweet_messages;
+    unretweet_messages = data.unretweet_messages;
+  });
+};
+
+var injectScript = function (script) {
   var injectedScript = document.createElement('script');
   injectedScript.type = 'text/javascript';
-  injectedScript.text = '(' + trick + ')("");';
+  injectedScript.text = '(' + script + ')("");';
   document.body.appendChild(injectedScript);
 };
 
@@ -103,8 +81,9 @@ var addListener = function () {
 };
 
 $(document).ready(function () {
+  loadMessages();
   checkNotificationAccess();
-  injectScript();
+  injectScript(trick);
   addListener();
 });
 
