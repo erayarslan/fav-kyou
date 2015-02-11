@@ -2,7 +2,7 @@
   "name" : "fav-kyou",
   "description" : "twitter action handler chrome plugin",
   "short_name": "fy",
-  "version" : "1.4",
+  "version" : "1.4.1",
   "permissions": ["notifications", "http://twitter.com/*", "https://twitter.com/*"],
   "manifest_version" : 2,
   "icons": {
@@ -11,8 +11,7 @@
     "128": "assert/icon128.png"
   },
   "browser_action": {
-    "default_icon": "assert/icon128.png",
-    "popup": "popup.html"
+    "default_icon": "assert/icon128.png"
   },
   "background":{
     "scripts": ["src/back.js"]
